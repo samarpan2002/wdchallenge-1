@@ -1,0 +1,172 @@
+:root{
+   --pale-blue: hsl(225, 100%, 94%);
+   --bright-blue: hsl(245, 75%, 52%);
+   --very-pale-blue: hsl(225, 100%, 98%);
+   --desaturated-blue: hsl(224, 23%, 55%);
+   --dark-blue: hsl(223, 47%, 23%);
+ }
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background: url('./images/pattern-background-mobile.svg') no-repeat center top,
+		var(--pale-blue);
+	background-size: contain;
+	color: var(--desaturated-blue);
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Card */
+.card {
+	background: #fff;
+	border-radius: 1rem;
+	width: 90vw;
+	box-shadow: 0 20px 20px hsla(245, 75%, 52%, 0.2);
+}
+
+.card-top img {
+	border-radius: 1rem 1rem 0 0;
+	width: 100%;
+}
+
+.card-body {
+	padding: 1.5rem;
+}
+
+.card-body h1 {
+	color: var(--dark-blue);
+	font-weight: 900;
+	margin-bottom: 1.5rem;
+}
+
+.card-body p {
+	line-height: 1.6rem;
+}
+
+/* Plan Card */
+.plan-card {
+	background: var(--very-pale-blue);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin: 1.5rem 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.icon {
+	display: flex;
+	flex-direction: row;
+}
+
+.plan-card p {
+	text-align: start;
+	padding-left: 1rem;
+}
+
+.plan-card span {
+	color: var(--dark-blue);
+	font-weight: 900;
+}
+
+.plan-card a:hover {
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+/* Buttons */
+.btns {
+	display: flex;
+	flex-direction: column;
+}
+
+.btns button {
+	border: none;
+	border-radius: 0.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.btns button:last-child {
+	margin-top: 1rem;
+}
+
+#pay {
+	background: var(--bright-blue);
+	box-shadow: 0 10px 20px hsla(245, 75%, 52%, 0.3);
+	color: #fff;
+	height: 50px;
+}
+
+#pay:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+#cancel {
+	background: none;
+	color: var(--desaturated-blue);
+	height: auto;
+}
+
+#cancel:hover {
+	cursor: pointer;
+	color: var(--dark-blue);
+}
+
+/* Footer */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media only screen and (min-width: 769px) {
+	html {
+		background: url('./images/pattern-background-desktop.svg') no-repeat top,
+			var(--pale-blue);
+		background-size: contain;
+	}
+
+	.card-body {
+		padding: 2rem;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	.card {
+		width: 40vw;
+	}
+
+	.card-body {
+		padding: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	.card {
+		width: 28vw;
+	}
+}
